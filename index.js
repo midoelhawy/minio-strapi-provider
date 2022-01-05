@@ -1,3 +1,14 @@
-exports.printMsg = function() {
-    console.log("This is a message from the demo package");
-  }
+module.exports = {
+    init(providerOptions) {
+      // init your provider if necessary
+  
+      return {
+        upload(file) {
+          return "Ok"
+        },
+        delete(file) {
+          return "ok"
+        },
+      };
+    },
+  };
